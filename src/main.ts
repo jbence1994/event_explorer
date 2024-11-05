@@ -1,7 +1,7 @@
-import Ticket from "./models/Ticket.js";
-import Event from "./models/Event.js";
-import TicketType from "./models/TicketType.js";
-import { formatDate, formatPrice } from "./utils/formatter.js";
+import Ticket from "./models/Ticket";
+import Event from "./models/Event";
+import TicketType from "./models/TicketType";
+import { formatDate, formatPrice } from "./utils/formatter";
 
 const event = new Event(
   "The Jimi Hendrix Experience Concert 2025",

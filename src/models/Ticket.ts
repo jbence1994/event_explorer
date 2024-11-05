@@ -1,5 +1,12 @@
+import Event from "./Event";
+import TicketType from "./TicketType";
+
 class Ticket {
-  constructor(event, type, price) {
+  private readonly _event: Event;
+  private readonly _type: TicketType;
+  private readonly _price: number;
+
+  constructor(event: Event, type: TicketType, price: number) {
     this._event = event;
     this._type = type;
     this._price = price;

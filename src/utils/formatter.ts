@@ -1,7 +1,7 @@
-import moment from "moment";
+import moment = require("moment");
 import "moment/locale/en-gb.js";
 
-const formatPrice = (input) => {
+const formatPrice: (input: number) => string = (input: number): string => {
   return new Intl.NumberFormat("en-US", {
     style: "currency",
     currency: "USD",
@@ -9,8 +9,8 @@ const formatPrice = (input) => {
   }).format(input);
 };
 
-const formatDate = () => {
-  const momentObj = moment();
+const formatDate: () => string = (): string => {
+  const momentObj: any = moment();
   return `${momentObj.format("LL")}`;
 };
 
