@@ -1,6 +1,3 @@
-import moment = require("moment");
-import "moment/locale/en-gb.js";
-
 const formatPrice: (input: number) => string = (input: number): string => {
   return new Intl.NumberFormat("en-US", {
     style: "currency",
@@ -9,9 +6,8 @@ const formatPrice: (input: number) => string = (input: number): string => {
   }).format(input);
 };
 
-const formatDate: () => string = (): string => {
-  const momentObj: any = moment();
-  return `${momentObj.format("LL")}`;
+const formatDate: (date: Date) => string = (date: Date): string => {
+  return date.toLocaleDateString("en-US");
 };
 
 export { formatPrice, formatDate };
