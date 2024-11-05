@@ -12,15 +12,15 @@ class Ticket {
     this._price = price;
   }
 
-  get event() {
+  get event(): Event {
     return this._event;
   }
 
-  get type() {
+  get type(): TicketType {
     return this._type;
   }
 
-  get price() {
+  get price(): number {
     return this._price;
   }
 }

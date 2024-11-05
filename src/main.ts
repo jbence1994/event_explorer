@@ -8,13 +8,13 @@ const event = new Event(
   new Date("2025-01-31T20:00:00")
 );
 
-const tickets = [
+const tickets: Ticket[] = [
   new Ticket(event, TicketType.EARLY_BIRD, 1000),
   new Ticket(event, TicketType.GENERAL, 2000),
   new Ticket(event, TicketType.VIP, 3500),
 ];
 
-tickets.forEach((ticket) => {
+tickets.forEach((ticket: Ticket): void => {
   console.log(
     `${ticket.event.name} on ${formatDate(ticket.event.date)}, ${
       ticket.type

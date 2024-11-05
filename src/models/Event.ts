@@ -7,11 +7,11 @@ class Event {
     this._date = date;
   }
 
-  get name() {
+  get name(): string {
     return this._name;
   }
 
-  get date() {
+  get date(): Date {
     return this._date;
   }
 }
