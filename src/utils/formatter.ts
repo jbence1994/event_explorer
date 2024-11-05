@@ -1,4 +1,4 @@
-const formatPrice = (input) => {
+const formatPrice: (input: number) => string = (input: number): string => {
   return new Intl.NumberFormat("en-US", {
     style: "currency",
     currency: "USD",
@@ -6,7 +6,7 @@ const formatPrice = (input) => {
   }).format(input);
 };
 
-const formatDate = (date) => {
+const formatDate: (date: Date) => string = (date: Date): string => {
   return date.toLocaleDateString("en-US");
 };
 
